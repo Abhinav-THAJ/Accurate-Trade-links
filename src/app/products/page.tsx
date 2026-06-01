@@ -2,24 +2,25 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, Filter, SlidersHorizontal, Scale, ChevronRight, Heart, BarChart2 } from "lucide-react";
+import { Search, Filter, SlidersHorizontal, Scale, ChevronRight, Heart, BarChart2, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
+import { useCartStore } from "@/lib/cartStore";
 
 const allProducts = [
   // Weighing
-  { id: 1, name: "CAS PR-II", category: "Weighing", sub: "Retail Scales", brand: "CAS", price: "Contact for Price", image: "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?q=80&w=600", capacity: "30kg", accuracy: "5g" },
-  { id: 2, name: "CAS ER Plus", category: "Weighing", sub: "Retail Scales", brand: "CAS", price: "Contact for Price", image: "https://images.unsplash.com/photo-1608220179579-399ca506a59b?q=80&w=600", capacity: "15kg", accuracy: "2g" },
-  { id: 3, name: "CAS SW-II", category: "Weighing", sub: "Retail Scales", brand: "CAS", price: "Contact for Price", image: "https://images.unsplash.com/photo-1590233649036-ecd12c8b827e?q=80&w=600", capacity: "30kg", accuracy: "5g" },
-  { id: 4, name: "Platform Scale HD-150", category: "Weighing", sub: "Platform Scales", brand: "Essae", price: "Contact for Price", image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=600", capacity: "150kg", accuracy: "50g" },
-  { id: 5, name: "Analytical Balance", category: "Weighing", sub: "Lab Scales", brand: "Citizen", price: "Contact for Price", image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=600", capacity: "200g", accuracy: "0.1mg" },
+  { id: 1, name: "CAS PR-II", category: "Weighing", sub: "Retail Scales", brand: "CAS", price: 15400, image: "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?q=80&w=600", capacity: "30kg", accuracy: "5g" },
+  { id: 2, name: "CAS ER Plus", category: "Weighing", sub: "Retail Scales", brand: "CAS", price: 18900, image: "https://images.unsplash.com/photo-1608220179579-399ca506a59b?q=80&w=600", capacity: "15kg", accuracy: "2g" },
+  { id: 3, name: "CAS SW-II", category: "Weighing", sub: "Retail Scales", brand: "CAS", price: 12200, image: "https://images.unsplash.com/photo-1590233649036-ecd12c8b827e?q=80&w=600", capacity: "30kg", accuracy: "5g" },
+  { id: 4, name: "Platform Scale HD-150", category: "Weighing", sub: "Platform Scales", brand: "Essae", price: 24500, image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=600", capacity: "150kg", accuracy: "50g" },
+  { id: 5, name: "Analytical Balance", category: "Weighing", sub: "Lab Scales", brand: "Citizen", price: 48900, image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=600", capacity: "200g", accuracy: "0.1mg" },
   // Billing
-  { id: 6, name: "Touch Billing System Pro", category: "Billing", sub: "Android Touch Billing", brand: "Epson", price: "Contact for Price", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600", capacity: "-", accuracy: "-" },
-  { id: 7, name: "Barcode Scanner HS-500", category: "Billing", sub: "Barcode Scanners", brand: "Honeywell", price: "Contact for Price", image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600", capacity: "-", accuracy: "-" },
-  { id: 8, name: "Thermal Receipt Printer", category: "Billing", sub: "POS Printers", brand: "Epson", price: "Contact for Price", image: "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=600", capacity: "-", accuracy: "-" },
+  { id: 6, name: "Touch Billing System Pro", category: "Billing", sub: "Android Touch Billing", brand: "Epson", price: 34800, image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600", capacity: "-", accuracy: "-" },
+  { id: 7, name: "Barcode Scanner HS-500", category: "Billing", sub: "Barcode Scanners", brand: "Honeywell", price: 7600, image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600", capacity: "-", accuracy: "-" },
+  { id: 8, name: "Thermal Receipt Printer", category: "Billing", sub: "POS Printers", brand: "Epson", price: 8200, image: "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=600", capacity: "-", accuracy: "-" },
   // Sealing
-  { id: 9, name: "Vacuum Sealer VS-300", category: "Sealing", sub: "Vacuum Sealing", brand: "ATL", price: "Contact for Price", image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=600", capacity: "-", accuracy: "-" },
-  { id: 10, name: "Band Sealer BS-600", category: "Sealing", sub: "Band Sealing", brand: "ATL", price: "Contact for Price", image: "https://images.unsplash.com/photo-1621415494297-c87a552bfdbb?q=80&w=600", capacity: "-", accuracy: "-" },
+  { id: 9, name: "Vacuum Sealer VS-300", category: "Sealing", sub: "Vacuum Sealing", brand: "ATL", price: 14900, image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=600", capacity: "-", accuracy: "-" },
+  { id: 10, name: "Band Sealer BS-600", category: "Sealing", sub: "Band Sealing", brand: "ATL", price: 28500, image: "https://images.unsplash.com/photo-1621415494297-c87a552bfdbb?q=80&w=600", capacity: "-", accuracy: "-" },
 ];
 
 const categories = ["All", "Weighing", "Billing", "Sealing", "Printing", "Filling", "Labelling", "Counting"];
@@ -31,6 +32,8 @@ export default function ProductsPage() {
   const [search, setSearch] = useState("");
   const [wishlist, setWishlist] = useState<number[]>([]);
   const [compare, setCompare] = useState<number[]>([]);
+
+  const addItem = useCartStore(state => state.addItem);
 
   const filtered = allProducts.filter(p => {
     const catMatch = selectedCat === "All" || p.category === selectedCat;
@@ -161,19 +164,37 @@ export default function ProductsPage() {
                   </div>
                   <div className="p-5">
                     <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mb-1">{product.sub}</p>
-                    <h3 className="font-bold text-foreground text-lg mb-3 group-hover:text-primary transition-colors">{product.name}</h3>
+                    <h3 className="font-bold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">{product.name}</h3>
                     {product.capacity !== "-" && (
-                      <div className="flex gap-4 text-sm text-muted-foreground mb-4">
+                      <div className="flex gap-4 text-xs text-muted-foreground mb-3">
                         <span>Capacity: <strong className="text-foreground">{product.capacity}</strong></span>
                         <span>Accuracy: <strong className="text-foreground">{product.accuracy}</strong></span>
                       </div>
                     )}
-                    <div className="flex gap-2 mt-2">
-                      <Button asChild size="sm" className="flex-1 rounded-full bg-primary text-white hover:bg-primary/90 font-semibold">
-                        <Link href={`/products/${product.id}`}>View Details</Link>
-                      </Button>
-                      <Button size="sm" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white font-semibold">
-                        Quote
+                    <div className="flex items-baseline justify-between mb-4">
+                      <span className="text-xl font-black text-primary">₹{product.price.toLocaleString("en-IN")}</span>
+                      <span className="text-xs text-muted-foreground font-semibold">Excl. GST</span>
+                    </div>
+                    <div className="flex flex-col gap-2 mt-2">
+                      <div className="flex gap-2">
+                        <Button asChild size="sm" variant="outline" className="flex-1 rounded-full border-border hover:bg-muted text-foreground font-semibold text-xs py-2">
+                          <Link href={`/products/${product.id}`}>Details</Link>
+                        </Button>
+                        <Button
+                          onClick={() => addItem(product)}
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 rounded-full border-primary text-primary hover:bg-primary hover:text-white font-semibold text-xs py-2 gap-1 cursor-pointer"
+                        >
+                          <ShoppingCart className="w-3.5 h-3.5" /> Cart
+                        </Button>
+                      </div>
+                      <Button
+                        asChild
+                        size="sm"
+                        className="w-full rounded-full bg-primary text-white hover:bg-primary/90 font-bold text-xs py-2"
+                      >
+                        <Link href={`/checkout?buyNow=${product.id}`}>Buy Now</Link>
                       </Button>
                     </div>
                   </div>

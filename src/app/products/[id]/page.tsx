@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronRight, Download, MessageSquare, Phone, FileText, Star, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronRight, Download, MessageSquare, Phone, FileText, Star, ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
+import { useCartStore } from "@/lib/cartStore";
 
 const specs = [
   { label: "Capacity", value: "30 kg" },
@@ -28,6 +29,7 @@ const faqs = [
 export default function ProductDetailPage() {
   const [mainImg, setMainImg] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const addItem = useCartStore(state => state.addItem);
 
   const images = [
     "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?q=80&w=800",
@@ -84,19 +86,45 @@ export default function ProductDetailPage() {
                 The CAS PR-II is a premium legal-for-trade retail scale ideal for grocery stores, supermarkets, and retail counters. Features a bright LCD backlit display and a robust stainless-steel platform.
               </p>
 
+              <div className="flex items-baseline gap-3 mb-6">
+                <span className="text-3xl font-black text-primary">₹15,400</span>
+                <span className="text-sm text-muted-foreground font-semibold">Excl. GST (₹18,172 Incl. 18% GST)</span>
+              </div>
+
               <div className="flex flex-col gap-3 mb-8">
-                <Button size="lg" className="h-14 w-full rounded-full bg-primary text-white text-lg font-bold hover:bg-primary/90 gap-3 shadow-lg shadow-primary/20">
-                  <FileText className="w-5 h-5" /> Request Quotation
-                </Button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Button
+                    onClick={() => addItem({
+                      id: 1,
+                      name: "CAS PR-II",
+                      price: 15400,
+                      image: "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?q=80&w=800",
+                      brand: "CAS",
+                      category: "Weighing"
+                    })}
+                    size="lg"
+                    variant="outline"
+                    className="h-14 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg font-bold gap-3 cursor-pointer bg-transparent flex items-center justify-center"
+                  >
+                    <ShoppingCart className="w-5 h-5" /> Add to Cart
+                  </Button>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="h-14 rounded-full bg-primary text-white text-lg font-bold hover:bg-primary/90 gap-3 shadow-lg shadow-primary/20 flex items-center justify-center"
+                  >
+                    <Link href="/checkout?buyNow=1">Buy Now</Link>
+                  </Button>
+                </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <Button size="lg" variant="outline" className="h-12 rounded-full border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white gap-2 font-bold">
+                  <Button size="lg" variant="outline" className="h-12 rounded-full border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white gap-2 font-bold flex items-center justify-center bg-transparent">
                     <MessageSquare className="w-4 h-4" /> WhatsApp
                   </Button>
-                  <Button size="lg" variant="outline" className="h-12 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white gap-2 font-bold">
+                  <Button size="lg" variant="outline" className="h-12 rounded-full border-2 border-zinc-700 text-zinc-700 hover:bg-zinc-700 hover:text-white gap-2 font-bold flex items-center justify-center bg-transparent">
                     <Phone className="w-4 h-4" /> Call Now
                   </Button>
                 </div>
-                <Button size="lg" variant="outline" className="h-12 w-full rounded-full border-border gap-2 font-semibold">
+                <Button size="lg" variant="outline" className="h-12 w-full rounded-full border-border gap-2 font-semibold flex items-center justify-center bg-transparent">
                   <Download className="w-4 h-4" /> Download Brochure
                 </Button>
               </div>

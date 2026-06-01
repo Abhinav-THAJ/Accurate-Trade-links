@@ -5,9 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Search, MessageSquare, ChevronDown, Menu, X,
-  Scale, Receipt, Printer, Package, Hash, Tag, Droplets
+  Scale, Receipt, Printer, Package, Hash, Tag, Droplets, ShoppingCart
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCartStore } from "@/lib/cartStore";
+import CartDrawer from "./CartDrawer";
 
 const megaMenuData = [
   {
@@ -72,6 +74,16 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  const getItemsCount = useCartStore(state => state.getTotalItems);
+  const cartCount = getItemsCount();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const pathname = usePathname();
   const megaRef = useRef<HTMLDivElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -199,6 +211,20 @@ export default function Navbar() {
                 <Search className="w-5 h-5" />
               </button>
 
+              {/* Cart toggle */}
+              <button
+                onClick={() => setCartOpen(true)}
+                className={`p-2 rounded-full transition-all relative ${solidNav ? "hover:bg-muted text-foreground" : "hover:bg-white/10 text-white"} cursor-pointer`}
+                aria-label="Cart"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                {mounted && cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-black rounded-full flex items-center justify-center animate-bounce shadow-md">
+                    {cartCount}
+                  </span>
+                )}
+              </button>
+
               <Button
                 asChild
                 variant="outline"
@@ -226,14 +252,28 @@ export default function Navbar() {
               </Button>
             </div>
 
-            {/* Mobile Toggle */}
-            <button
-              className={`xl:hidden p-2 rounded-lg transition-colors ${solidNav ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"}`}
-              onClick={() => setMobileOpen(o => !o)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile Actions (Cart + Menu Toggle) */}
+            <div className="xl:hidden flex items-center gap-2">
+              <button
+                onClick={() => setCartOpen(true)}
+                className={`p-2 rounded-full transition-all relative ${solidNav ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"} cursor-pointer`}
+                aria-label="Cart"
+              >
+                <ShoppingCart className="w-5.5 h-5.5" />
+                {mounted && cartCount > 0 && (
+                  <span className="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 bg-primary text-white text-[9px] font-black rounded-full flex items-center justify-center shadow-md">
+                    {cartCount}
+                  </span>
+                )}
+              </button>
+              <button
+                className={`p-2 rounded-lg transition-colors ${solidNav ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"}`}
+                onClick={() => setMobileOpen(o => !o)}
+                aria-label="Toggle menu"
+              >
+                {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -313,6 +353,9 @@ export default function Navbar() {
           onClick={() => setProductsOpen(false)}
         />
       )}
+
+      {/* Cart Drawer Panel */}
+      <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 }

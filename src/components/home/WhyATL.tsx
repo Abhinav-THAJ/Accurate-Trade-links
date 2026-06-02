@@ -45,15 +45,15 @@ export default function WhyATL() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 sm:gap-x-8 sm:gap-y-12">
           {features.map((feat, i) => (
-            <div key={i} className="flex gap-6 group">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:-translate-y-2 shadow-xl">
+            <div key={i} className="flex flex-col sm:flex-row gap-3 sm:gap-6 group">
+              <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:-translate-y-2 shadow-xl">
                 {feat.icon}
               </div>
               <div>
-                <h4 className="text-xl font-bold mb-3">{feat.title}</h4>
-                <p className="text-zinc-400 leading-relaxed font-light">{feat.desc}</p>
+                <h4 className="text-base sm:text-xl font-bold mb-1 sm:mb-3">{feat.title}</h4>
+                <p className="text-zinc-400 leading-relaxed font-light text-sm sm:text-base">{feat.desc}</p>
               </div>
             </div>
           ))}

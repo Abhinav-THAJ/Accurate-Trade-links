@@ -77,7 +77,7 @@ export default function BrandsPage() {
         </div>
 
         <div className="container mx-auto px-4 md:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {brands.map((brand) => (
               <div key={brand.name} className="group bg-white border border-border rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 <div className="relative h-52 overflow-hidden">

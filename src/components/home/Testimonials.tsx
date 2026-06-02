@@ -40,23 +40,23 @@ export default function Testimonials() {
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground">Trusted Across Kerala</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white border border-border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative">
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10" />
-              <div className="flex gap-1 mb-4">
+            <div key={i} className="bg-white border border-border rounded-2xl p-4 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative">
+              <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 sm:w-10 sm:h-10 text-primary/10" />
+              <div className="flex gap-1 mb-3 sm:mb-4">
                 {Array.from({ length: t.rating }).map((_, s) => (
-                  <Star key={s} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <Star key={s} className="w-3 h-3 sm:w-4 sm:h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-muted-foreground font-light leading-relaxed mb-6 text-lg">&quot;{t.text}&quot;</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-muted">
+              <p className="text-muted-foreground font-light leading-relaxed mb-4 sm:mb-6 text-sm sm:text-lg">&quot;{t.text}&quot;</p>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden flex-shrink-0 bg-muted">
                   <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">{t.name}</div>
-                  <div className="text-sm text-muted-foreground font-medium">{t.company}</div>
+                  <div className="font-bold text-foreground text-sm sm:text-base">{t.name}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground font-medium">{t.company}</div>
                 </div>
               </div>
             </div>

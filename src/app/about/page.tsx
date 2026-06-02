@@ -81,7 +81,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-24">
           {mvv.map((item, i) => (
             <div key={i} className="bg-white border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5">{item.icon}</div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
 
         <div>
           <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">Leadership Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {team.map((member, i) => (
               <div key={i} className="group bg-white border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
                 <div className="relative h-56 overflow-hidden bg-muted">

@@ -39,7 +39,7 @@ export default function BlogSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {latestPosts.map((post, i) => (
             <Link key={i} href={post.link} className="group bg-white border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="relative h-52 overflow-hidden">

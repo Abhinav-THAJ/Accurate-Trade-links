@@ -19,7 +19,7 @@ export default function IndustriesServed() {
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground">Tailored Solutions for Every Sector</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {industries.map((ind, i) => (
             <Link key={i} href="/industries" className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md">
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />

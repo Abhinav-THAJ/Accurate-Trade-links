@@ -56,7 +56,7 @@ export default function SupportPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-20">
           {supportCards.map((card, i) => (
             <div key={i} className={`rounded-2xl border p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${card.color}`}>
               <div className="mb-4">{card.icon}</div>

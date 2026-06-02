@@ -43,7 +43,7 @@ export default function AboutPage() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-white font-semibold">About Us</span>
           </div>
-          <h1 className="text-5xl font-black text-white mb-4">About Accurate Trade Links</h1>
+          <h1 className="text-5xl font-extrabold text-white mb-4">About Accurate Trade Links</h1>
           <p className="text-zinc-300 text-lg font-light max-w-3xl">
             Over 20 years of delivering precision weighing, billing, and industrial automation solutions to businesses, institutions, and government organisations across Kerala.
           </p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Our Story</h2>
-            <h3 className="text-4xl font-black text-foreground mb-6">Built on Precision, Driven by Trust</h3>
+            <h3 className="text-4xl font-extrabold text-foreground mb-6">Built on Precision, Driven by Trust</h3>
             <p className="text-muted-foreground text-lg font-light mb-5 leading-relaxed">
               Accurate Trade Links (ATL) was founded in 2003 with a simple mission: to provide Kerala&apos;s businesses and institutions with reliable, accurate, and affordable weighing and measurement solutions.
             </p>
@@ -65,7 +65,7 @@ export default function AboutPage() {
               {stats.map((s, i) => (
                 <div key={i} className="flex items-center gap-4 p-4 bg-muted/50 rounded-xl border border-border">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">{s.icon}</div>
-                  <div><div className="font-black text-foreground text-lg">{s.label}</div><div className="text-xs text-muted-foreground font-medium">{s.desc}</div></div>
+                  <div><div className="font-extrabold text-foreground text-lg">{s.label}</div><div className="text-xs text-muted-foreground font-medium">{s.desc}</div></div>
                 </div>
               ))}
             </div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200" alt="ATL Showroom" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-white rounded-2xl p-6 shadow-xl">
-              <div className="text-4xl font-black">2003</div>
+              <div className="text-4xl font-extrabold">2003</div>
               <div className="text-white/80 text-sm font-medium">Year Founded</div>
             </div>
           </div>
@@ -85,14 +85,14 @@ export default function AboutPage() {
           {mvv.map((item, i) => (
             <div key={i} className="bg-white border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5">{item.icon}</div>
-              <h3 className="text-xl font-black text-foreground mb-3">{item.title}</h3>
+              <h3 className="text-xl font-extrabold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground font-light leading-relaxed">{item.text}</p>
             </div>
           ))}
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-black text-foreground text-center mb-12">Our Journey</h2>
+          <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">Our Journey</h2>
           <div className="relative">
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-border transform md:-translate-x-px" />
             <div className="space-y-8">
@@ -104,7 +104,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="relative flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center shadow-lg shadow-primary/20 z-10 relative">
+                    <div className="w-16 h-16 rounded-full bg-primary text-white font-extrabold text-sm flex items-center justify-center shadow-lg shadow-primary/20 z-10 relative">
                       {m.year}
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-black text-foreground text-center mb-12">Leadership Team</h2>
+          <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">Leadership Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, i) => (
               <div key={i} className="group bg-white border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-black text-foreground text-lg">{member.name}</h3>
+                  <h3 className="font-extrabold text-foreground text-lg">{member.name}</h3>
                   <p className="text-sm text-muted-foreground font-medium mt-1">{member.role}</p>
                 </div>
               </div>

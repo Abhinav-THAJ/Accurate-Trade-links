@@ -12,7 +12,7 @@ export default function Brands() {
         
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-70">
           {brands.map((brand, i) => (
-            <div key={i} className="text-2xl md:text-3xl font-black text-slate-400 hover:text-primary transition-colors duration-300 cursor-pointer">
+            <div key={i} className="text-2xl md:text-3xl font-extrabold text-slate-400 hover:text-primary transition-colors duration-300 cursor-pointer">
               {brand}
             </div>
           ))}

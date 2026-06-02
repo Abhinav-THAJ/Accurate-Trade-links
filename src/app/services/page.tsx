@@ -59,7 +59,7 @@ export default function ServicesPage() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-white font-semibold">Services</span>
           </div>
-          <h1 className="text-5xl font-black text-white mb-4">Our Services</h1>
+          <h1 className="text-5xl font-extrabold text-white mb-4">Our Services</h1>
           <p className="text-zinc-300 text-lg font-light max-w-3xl">
             End-to-end service support from installation and calibration to annual maintenance and emergency repairs across Kerala.
           </p>
@@ -78,7 +78,7 @@ export default function ServicesPage() {
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
                   {service.icon}
                 </div>
-                <h2 className="text-2xl font-black text-foreground mb-4">{service.title}</h2>
+                <h2 className="text-2xl font-extrabold text-foreground mb-4">{service.title}</h2>
                 <p className="text-muted-foreground mb-6 font-light leading-relaxed">{service.desc}</p>
                 <ul className="grid grid-cols-2 gap-2 mb-8">
                   {service.features.map(f => (

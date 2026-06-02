@@ -72,7 +72,7 @@ function CheckoutContent() {
           <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center text-muted-foreground mb-4">
             <ShoppingBag className="w-8 h-8" />
           </div>
-          <h2 className="text-2xl font-black text-foreground mb-2">No items to checkout</h2>
+          <h2 className="text-2xl font-extrabold text-foreground mb-2">No items to checkout</h2>
           <p className="text-muted-foreground font-light max-w-sm mb-6">
             Please add items to your cart first or select a product to buy.
           </p>
@@ -126,7 +126,7 @@ function CheckoutContent() {
             <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-12 h-12" />
             </div>
-            <h1 className="text-3xl lg:text-4xl font-black text-foreground mb-3">Order Confirmed!</h1>
+            <h1 className="text-3xl lg:text-4xl font-extrabold text-foreground mb-3">Order Confirmed!</h1>
             <p className="text-muted-foreground font-light text-lg mb-6 leading-relaxed">
               Thank you for choosing Accurate Trade Links. Your order has been placed successfully and is being processed by our commercial sales division.
             </p>
@@ -134,7 +134,7 @@ function CheckoutContent() {
             <div className="bg-muted/50 border border-border rounded-2xl p-6 mb-8 text-left space-y-4">
               <div className="flex justify-between items-center pb-3 border-b border-border">
                 <span className="text-sm text-muted-foreground font-bold uppercase tracking-wider">Order ID</span>
-                <span className="font-mono font-black text-foreground text-sm">{orderId}</span>
+                <span className="font-mono font-extrabold text-foreground text-sm">{orderId}</span>
               </div>
               <div className="space-y-3">
                 {checkoutItems.map((item) => (
@@ -142,7 +142,7 @@ function CheckoutContent() {
                     <span className="font-semibold text-foreground">
                       {item.name} <span className="text-muted-foreground font-normal">× {item.quantity}</span>
                     </span>
-                    <span className="font-black text-foreground">₹{(item.price * item.quantity).toLocaleString("en-IN")}</span>
+                    <span className="font-extrabold text-foreground">₹{(item.price * item.quantity).toLocaleString("en-IN")}</span>
                   </div>
                 ))}
               </div>
@@ -155,7 +155,7 @@ function CheckoutContent() {
                   <span>GST (18%)</span>
                   <span>₹{gst.toLocaleString("en-IN")}</span>
                 </div>
-                <div className="flex justify-between text-base font-black text-primary pt-2 border-t border-dashed border-border">
+                <div className="flex justify-between text-base font-extrabold text-primary pt-2 border-t border-dashed border-border">
                   <span>Grand Total</span>
                   <span>₹{total.toLocaleString("en-IN")}</span>
                 </div>
@@ -200,7 +200,7 @@ function CheckoutContent() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-white font-semibold">Checkout</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Checkout</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Checkout</h1>
           <p className="text-zinc-300 text-lg font-light max-w-2xl">
             Provide your commercial delivery, billing, and tax details to finalize your equipment order.
           </p>
@@ -213,7 +213,7 @@ function CheckoutContent() {
           {/* Form Side */}
           <div className="flex-1 space-y-6">
             <div className="bg-white rounded-3xl border border-border p-8 shadow-sm">
-              <h2 className="text-xl font-black text-foreground mb-6 pb-3 border-b border-border">1. Commercial Shipping Details</h2>
+              <h2 className="text-xl font-extrabold text-foreground mb-6 pb-3 border-b border-border">1. Commercial Shipping Details</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <div>
@@ -282,7 +282,7 @@ function CheckoutContent() {
             </div>
 
             <div className="bg-white rounded-3xl border border-border p-8 shadow-sm">
-              <h2 className="text-xl font-black text-foreground mb-6 pb-3 border-b border-border">2. Delivery Address</h2>
+              <h2 className="text-xl font-extrabold text-foreground mb-6 pb-3 border-b border-border">2. Delivery Address</h2>
               
               <div className="mb-5">
                 <label className="block text-xs font-bold text-muted-foreground uppercase mb-2">Complete Address *</label>
@@ -339,7 +339,7 @@ function CheckoutContent() {
             </div>
 
             <div className="bg-white rounded-3xl border border-border p-8 shadow-sm">
-              <h2 className="text-xl font-black text-foreground mb-6 pb-3 border-b border-border">3. Payment Method</h2>
+              <h2 className="text-xl font-extrabold text-foreground mb-6 pb-3 border-b border-border">3. Payment Method</h2>
               
               <div className="space-y-4">
                 {[
@@ -375,7 +375,7 @@ function CheckoutContent() {
           {/* Cart Details Sidebar */}
           <div className="w-full lg:w-96 flex-shrink-0 space-y-6">
             <div className="bg-white rounded-3xl border border-border p-6 shadow-sm sticky top-24">
-              <h3 className="font-black text-foreground text-lg mb-5 pb-3 border-b border-border flex items-center justify-between">
+              <h3 className="font-extrabold text-foreground text-lg mb-5 pb-3 border-b border-border flex items-center justify-between">
                 <span>Order Summary</span>
                 {buyNowItem && (
                   <span className="text-xs bg-primary/10 text-primary font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Buy Now</span>
@@ -393,7 +393,7 @@ function CheckoutContent() {
                         <h4 className="font-bold text-foreground text-xs line-clamp-1">{item.name}</h4>
                         <p className="text-[10px] text-muted-foreground font-semibold uppercase">{item.brand} • Qty {item.quantity}</p>
                       </div>
-                      <span className="font-black text-foreground text-xs">₹{(item.price * item.quantity).toLocaleString("en-IN")}</span>
+                      <span className="font-extrabold text-foreground text-xs">₹{(item.price * item.quantity).toLocaleString("en-IN")}</span>
                     </div>
                   </div>
                 ))}
@@ -412,7 +412,7 @@ function CheckoutContent() {
                   <span>On-site Installation & SLA</span>
                   <span className="font-bold text-green-600">FREE</span>
                 </div>
-                <div className="border-t border-border pt-4 flex justify-between text-base font-black text-foreground">
+                <div className="border-t border-border pt-4 flex justify-between text-base font-extrabold text-foreground">
                   <span>Total Amount</span>
                   <span className="text-primary text-xl">₹{total.toLocaleString("en-IN")}</span>
                 </div>

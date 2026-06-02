@@ -93,7 +93,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 relative z-20">
         <div className="max-w-4xl">
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7.5xl font-black text-white leading-[1.1] mb-4 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7.5xl font-extrabold text-white leading-[1.1] mb-4 tracking-tight">
             {slide.headline} <br />
             <span className="text-primary">{slide.headline2}</span>
           </h1>
@@ -117,7 +117,7 @@ export default function Hero() {
               { value: "24/7", label: "Service Support" }
             ].map((stat, i) => (
               <div key={i} className="flex flex-col">
-                <div className="text-3xl lg:text-4xl font-black text-white mb-1.5">{stat.value}</div>
+                <div className="text-3xl lg:text-4xl font-extrabold text-white mb-1.5">{stat.value}</div>
                 <div className="text-xs lg:text-sm text-zinc-400 font-semibold uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}

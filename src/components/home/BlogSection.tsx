@@ -32,7 +32,7 @@ export default function BlogSection() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-14">
           <div>
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-2">Resources & Insights</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-foreground">Latest Articles</h3>
+            <h3 className="text-4xl md:text-5xl font-extrabold text-foreground">Latest Articles</h3>
           </div>
           <Link href="/blog" className="mt-6 md:mt-0 text-primary font-bold flex items-center gap-2 hover:underline underline-offset-4 decoration-2">
             View All Articles <ArrowRight className="w-4 h-4" />
@@ -50,7 +50,7 @@ export default function BlogSection() {
               </div>
               <div className="p-6">
                 <p className="text-xs text-muted-foreground mb-3 font-semibold">{post.date}</p>
-                <h3 className="font-black text-foreground text-lg group-hover:text-primary transition-colors leading-snug">{post.title}</h3>
+                <h3 className="font-extrabold text-foreground text-lg group-hover:text-primary transition-colors leading-snug">{post.title}</h3>
                 <div className="mt-4 flex items-center text-primary font-bold text-sm">
                   Read More <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" />
                 </div>

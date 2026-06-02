@@ -63,7 +63,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
             <div className="p-6 border-b border-border flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <ShoppingBag className="w-5 h-5 text-primary" />
-                <h2 className="text-xl font-black text-foreground">Your Cart</h2>
+                <h2 className="text-xl font-extrabold text-foreground">Your Cart</h2>
                 <span className="bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded-full">
                   {getTotalItems()} items
                 </span>
@@ -131,7 +131,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                             <Plus className="w-3 h-3" />
                           </button>
                         </div>
-                        <span className="font-black text-primary text-sm">
+                        <span className="font-extrabold text-primary text-sm">
                           ₹{(item.price * item.quantity).toLocaleString("en-IN")}
                         </span>
                       </div>
@@ -153,7 +153,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                     <span>Estimated GST (18%)</span>
                     <span>₹{gst.toLocaleString("en-IN")}</span>
                   </div>
-                  <div className="border-t border-border my-2 pt-2 flex justify-between text-base font-black text-foreground">
+                  <div className="border-t border-border my-2 pt-2 flex justify-between text-base font-extrabold text-foreground">
                     <span>Total (Est.)</span>
                     <span className="text-primary text-lg">₹{total.toLocaleString("en-IN")}</span>
                   </div>

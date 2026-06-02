@@ -63,7 +63,7 @@ export default function IndustriesPage() {
             <div className="flex items-center gap-2 text-sm text-zinc-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link><ChevronRight className="w-4 h-4" /><span className="text-white font-semibold">Industries</span>
             </div>
-            <h1 className="text-5xl font-black text-white mb-4">Industry Solutions</h1>
+            <h1 className="text-5xl font-extrabold text-white mb-4">Industry Solutions</h1>
             <p className="text-zinc-300 text-lg font-light max-w-3xl">
               ATL delivers tailored industrial automation, weighing, and billing solutions across 11 major industry verticals in Kerala and beyond.
             </p>
@@ -76,10 +76,10 @@ export default function IndustriesPage() {
               <div className={`relative rounded-3xl overflow-hidden shadow-2xl h-96 ${i % 2 === 1 ? "lg:col-start-2" : ""}`}>
                 <img src={ind.image} alt={ind.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-3xl font-black text-white">{ind.name}</div>
+                <div className="absolute bottom-6 left-6 text-3xl font-extrabold text-white">{ind.name}</div>
               </div>
               <div className={i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                <h2 className="text-3xl font-black text-foreground mb-4">{ind.name}</h2>
+                <h2 className="text-3xl font-extrabold text-foreground mb-4">{ind.name}</h2>
                 <p className="text-muted-foreground text-lg mb-6 font-light">{ind.desc}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                   <div>

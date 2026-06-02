@@ -16,7 +16,7 @@ export default function IndustriesServed() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-2">Industries We Serve</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-foreground">Tailored Solutions for Every Sector</h3>
+          <h3 className="text-4xl md:text-5xl font-extrabold text-foreground">Tailored Solutions for Every Sector</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

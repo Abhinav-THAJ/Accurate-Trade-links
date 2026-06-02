@@ -69,7 +69,7 @@ export default function BrandsPage() {
             <div className="flex items-center gap-2 text-sm text-zinc-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link><ChevronRight className="w-4 h-4" /><span className="text-white font-semibold">Brands</span>
             </div>
-            <h1 className="text-5xl font-black text-white mb-4">Our Brand Partners</h1>
+            <h1 className="text-5xl font-extrabold text-white mb-4">Our Brand Partners</h1>
             <p className="text-zinc-300 text-lg font-light max-w-3xl">
               ATL is an authorized distributor and service partner for the world&apos;s leading industrial technology brands.
             </p>
@@ -84,7 +84,7 @@ export default function BrandsPage() {
                   <img src={brand.image} alt={brand.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <div className="text-3xl font-black text-white">{brand.name}</div>
+                    <div className="text-3xl font-extrabold text-white">{brand.name}</div>
                     <div className="text-white/70 text-sm font-medium">{brand.origin} · {brand.category}</div>
                   </div>
                 </div>

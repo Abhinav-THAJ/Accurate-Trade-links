@@ -98,7 +98,7 @@ export default function Categories() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-14">
           <div className="max-w-2xl">
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Our Solutions</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-foreground leading-tight">
+            <h3 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
               Complete Product Ecosystem
             </h3>
           </div>

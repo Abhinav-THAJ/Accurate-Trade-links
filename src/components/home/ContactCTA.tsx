@@ -18,7 +18,7 @@ export default function ContactCTA() {
             Free Consultation & Custom Quotation
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
             Ready to Upgrade Your <br />
             <span className="text-primary">Enterprise Systems?</span>
           </h2>

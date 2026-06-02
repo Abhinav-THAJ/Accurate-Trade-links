@@ -75,7 +75,7 @@ export default function ProductDetailPage() {
               <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase tracking-wider mb-4">
                 Retail Weighing Scale
               </div>
-              <h1 className="text-4xl font-black text-foreground mb-3">CAS PR-II Digital Scale</h1>
+              <h1 className="text-4xl font-extrabold text-foreground mb-3">CAS PR-II Digital Scale</h1>
               <div className="flex items-center gap-2 mb-6">
                 <div className="flex gap-1">
                   {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
@@ -87,7 +87,7 @@ export default function ProductDetailPage() {
               </p>
 
               <div className="flex items-baseline gap-3 mb-6">
-                <span className="text-3xl font-black text-primary">₹15,400</span>
+                <span className="text-3xl font-extrabold text-primary">₹15,400</span>
                 <span className="text-sm text-muted-foreground font-semibold">Excl. GST (₹18,172 Incl. 18% GST)</span>
               </div>
 
@@ -131,7 +131,7 @@ export default function ProductDetailPage() {
           {/* Specs */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-20">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-black text-foreground mb-6">Technical Specifications</h2>
+              <h2 className="text-2xl font-extrabold text-foreground mb-6">Technical Specifications</h2>
               <div className="bg-white border border-border rounded-2xl overflow-hidden shadow-sm">
                 {specs.map((spec, i) => (
                   <div key={i} className={`flex items-center px-6 py-4 ${i % 2 === 0 ? "bg-white" : "bg-muted/40"}`}>
@@ -162,7 +162,7 @@ export default function ProductDetailPage() {
 
           {/* FAQ */}
           <div className="mb-20 max-w-3xl">
-            <h2 className="text-2xl font-black text-foreground mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-extrabold text-foreground mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white border border-border rounded-2xl overflow-hidden">

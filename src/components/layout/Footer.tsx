@@ -15,8 +15,8 @@ export default function Footer() {
                 className="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-lg"
               />
               <div>
-                <div className="font-black text-white text-lg leading-none">ACCURATE</div>
-                <div className="font-black text-white text-lg leading-none">TRADE LINKS</div>
+                <div className="font-extrabold text-white text-lg leading-none">ACCURATE</div>
+                <div className="font-extrabold text-white text-lg leading-none">TRADE LINKS</div>
               </div>
             </div>
             <p className="text-sm font-light leading-relaxed mb-6 max-w-xs">
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-black text-white text-sm uppercase tracking-wider mb-5">Products</h4>
+            <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-5">Products</h4>
             <ul className="space-y-3 text-sm">
               {["Weighing Systems", "Billing Solutions", "Printing Scales", "Counting Machines", "Sealing Machines", "Labelling Systems", "Filling Machines"].map(p => (
                 <li key={p}><Link href="/products" className="hover:text-white transition-colors hover:text-primary">{p}</Link></li>
@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-black text-white text-sm uppercase tracking-wider mb-5">Services</h4>
+            <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-5">Services</h4>
             <ul className="space-y-3 text-sm">
               {["Installation", "Calibration", "Annual Maintenance", "Repair Services", "Onsite Support", "Training", "Consultation"].map(s => (
                 <li key={s}><Link href="/services" className="hover:text-primary transition-colors">{s}</Link></li>
@@ -52,13 +52,13 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-black text-white text-sm uppercase tracking-wider mb-5">Company</h4>
+            <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-5">Company</h4>
             <ul className="space-y-3 text-sm">
               {[["About Us", "/about"], ["Industries", "/industries"], ["Brands", "/brands"], ["Blog", "/blog"], ["Support", "/support"], ["Contact Us", "/contact"]].map(([label, href]) => (
                 <li key={label as string}><Link href={href as string} className="hover:text-primary transition-colors">{label}</Link></li>
               ))}
             </ul>
-            <h4 className="font-black text-white text-sm uppercase tracking-wider mb-4 mt-8">Follow Us</h4>
+            <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-4 mt-8">Follow Us</h4>
             <div className="flex flex-wrap gap-2">
               {["Facebook", "Instagram", "YouTube", "LinkedIn"].map((name) => (
                 <a key={name} href="#" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-primary text-zinc-400 hover:text-white text-xs font-semibold transition-colors">

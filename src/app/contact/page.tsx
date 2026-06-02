@@ -34,7 +34,7 @@ export default function ContactPage() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-white font-semibold">Contact</span>
           </div>
-          <h1 className="text-5xl font-black text-white mb-4">Get In Touch</h1>
+          <h1 className="text-5xl font-extrabold text-white mb-4">Get In Touch</h1>
           <p className="text-zinc-300 text-lg font-light max-w-3xl">Our team of experts is ready to help you find the perfect solution for your business.</p>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 md:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 bg-white border border-border rounded-3xl p-8 shadow-sm">
-            <h2 className="text-2xl font-black text-foreground mb-2">Send Us a Message</h2>
+            <h2 className="text-2xl font-extrabold text-foreground mb-2">Send Us a Message</h2>
             <p className="text-muted-foreground mb-6 font-light">We will respond within one business day.</p>
             <div className="mb-6">
               <label className="block text-sm font-bold text-foreground mb-2">Select Department</label>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-10 h-10 text-green-500" />
                 </div>
-                <h3 className="text-2xl font-black text-foreground mb-3">Message Received!</h3>
+                <h3 className="text-2xl font-extrabold text-foreground mb-3">Message Received!</h3>
                 <p className="text-muted-foreground font-light">Thank you, {form.name}. Our team will respond within one business day.</p>
                 <Button className="mt-8 rounded-full bg-primary text-white font-bold" onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", message: "" }); }}>Send Another Message</Button>
               </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
 
           <div className="space-y-6">
             <div className="bg-secondary text-white rounded-2xl p-6">
-              <h3 className="font-black text-lg mb-4">Contact Information</h3>
+              <h3 className="font-extrabold text-lg mb-4">Contact Information</h3>
               <div className="space-y-4 text-sm font-light">
                 <div className="flex items-start gap-3"><Phone className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><div><div className="font-semibold text-white">Phone</div><div className="text-zinc-300">+91 9000 000 000</div></div></div>
                 <div className="flex items-start gap-3"><MessageSquare className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><div><div className="font-semibold text-white">WhatsApp</div><div className="text-zinc-300">+91 9000 000 000</div></div></div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
             </div>
             <div className="bg-green-500 rounded-2xl p-6 text-white text-center">
               <MessageSquare className="w-10 h-10 mx-auto mb-3" />
-              <h3 className="font-black text-lg mb-2">WhatsApp Us Now</h3>
+              <h3 className="font-extrabold text-lg mb-2">WhatsApp Us Now</h3>
               <p className="text-white/80 text-sm mb-4 font-light">Get instant response on WhatsApp during business hours.</p>
               <a href="https://wa.me/919000000000" target="_blank" rel="noopener noreferrer" className="block w-full py-2.5 rounded-full bg-white text-green-600 font-bold text-sm hover:bg-green-50 text-center">
                 Open WhatsApp

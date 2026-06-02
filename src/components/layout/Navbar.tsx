@@ -130,8 +130,8 @@ export default function Navbar() {
                 />
               </div>
               <div className={`hidden sm:flex flex-col leading-none ${navTextClass} transition-colors`}>
-                <span className="font-black text-sm tracking-widest">ACCURATE</span>
-                <span className="font-black text-sm tracking-widest">TRADE LINKS</span>
+                <span className="font-extrabold text-sm tracking-widest">ACCURATE</span>
+                <span className="font-extrabold text-sm tracking-widest">TRADE LINKS</span>
               </div>
             </Link>
 
@@ -219,7 +219,7 @@ export default function Navbar() {
               >
                 <ShoppingCart className="w-5 h-5" />
                 {mounted && cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-black rounded-full flex items-center justify-center animate-bounce shadow-md">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-extrabold rounded-full flex items-center justify-center animate-bounce shadow-md">
                     {cartCount}
                   </span>
                 )}
@@ -235,7 +235,7 @@ export default function Navbar() {
               >
                 <ShoppingCart className="w-5.5 h-5.5" />
                 {mounted && cartCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 bg-primary text-white text-[9px] font-black rounded-full flex items-center justify-center shadow-md">
+                  <span className="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 bg-primary text-white text-[9px] font-extrabold rounded-full flex items-center justify-center shadow-md">
                     {cartCount}
                   </span>
                 )}

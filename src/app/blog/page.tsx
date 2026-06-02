@@ -85,7 +85,7 @@ export default function BlogPage() {
             <div className="flex items-center gap-2 text-sm text-zinc-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link><ChevronRight className="w-4 h-4" /><span className="text-white font-semibold">Blog</span>
             </div>
-            <h1 className="text-5xl font-black text-white mb-4">Resources & Insights</h1>
+            <h1 className="text-5xl font-extrabold text-white mb-4">Resources & Insights</h1>
             <p className="text-zinc-300 text-lg font-light max-w-3xl">Product guides, industry news, maintenance tips, and technology updates from the ATL team.</p>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function BlogPage() {
                   <span className="flex items-center gap-1"><User className="w-4 h-4" />{posts[0].author}</span>
                   <span>{posts[0].readTime}</span>
                 </div>
-                <h2 className="text-2xl font-black text-foreground mb-4 group-hover:text-primary transition-colors">{posts[0].title}</h2>
+                <h2 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{posts[0].title}</h2>
                 <p className="text-muted-foreground font-light mb-6">{posts[0].excerpt}</p>
                 <Link href={`/blog/${posts[0].id}`} className="flex items-center gap-2 text-primary font-bold hover:underline underline-offset-4">
                   Read Article <ArrowRight className="w-4 h-4" />
@@ -135,7 +135,7 @@ export default function BlogPage() {
                     <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="font-black text-foreground text-lg mb-2 group-hover:text-primary transition-colors flex-1">{post.title}</h3>
+                  <h3 className="font-extrabold text-foreground text-lg mb-2 group-hover:text-primary transition-colors flex-1">{post.title}</h3>
                   <p className="text-sm text-muted-foreground font-light line-clamp-2">{post.excerpt}</p>
                 </div>
               </Link>

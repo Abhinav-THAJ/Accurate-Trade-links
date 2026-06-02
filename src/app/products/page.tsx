@@ -57,7 +57,7 @@ export default function ProductsPage() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-white font-semibold">Products</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-4">All Products</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">All Products</h1>
           <p className="text-zinc-300 text-lg font-light max-w-2xl">
             Browse our complete range of precision weighing, billing, packaging & automation solutions from world-leading brands.
           </p>
@@ -172,7 +172,7 @@ export default function ProductsPage() {
                       </div>
                     )}
                     <div className="flex items-baseline justify-between mb-4">
-                      <span className="text-xl font-black text-primary">₹{product.price.toLocaleString("en-IN")}</span>
+                      <span className="text-xl font-extrabold text-primary">₹{product.price.toLocaleString("en-IN")}</span>
                       <span className="text-xs text-muted-foreground font-semibold">Excl. GST</span>
                     </div>
                     <div className="flex flex-col gap-2 mt-2">

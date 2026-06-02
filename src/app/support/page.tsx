@@ -33,7 +33,7 @@ export default function SupportPage() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-white font-semibold">Support</span>
           </div>
-          <h1 className="text-5xl font-black text-white mb-4">Customer Support</h1>
+          <h1 className="text-5xl font-extrabold text-white mb-4">Customer Support</h1>
           <p className="text-zinc-300 text-lg font-light max-w-3xl">
             ATL&apos;s dedicated support team is here to help you at every stage – from product registration to after-sales service.
           </p>
@@ -43,7 +43,7 @@ export default function SupportPage() {
       <div className="container mx-auto px-4 md:px-8 py-16">
         <div className="bg-primary text-white rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 mb-16">
           <div>
-            <div className="font-black text-xl mb-1">Need Immediate Help?</div>
+            <div className="font-extrabold text-xl mb-1">Need Immediate Help?</div>
             <p className="text-white/80 text-sm">Our support engineers are available Mon-Sat 9AM-6PM, Emergency support 24/7</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
@@ -70,7 +70,7 @@ export default function SupportPage() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-black text-foreground mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-extrabold text-foreground mb-8 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <details key={i} className="group bg-white border border-border rounded-2xl overflow-hidden">

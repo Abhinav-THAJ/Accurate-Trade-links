@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useCartStore } from "@/lib/cartStore";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
-import { ChevronRight, ShieldCheck, CreditCard, Landmark, Truck, ShoppingBag, CheckCircle, ArrowLeft } from "lucide-react";
+import { ChevronRight, ShieldCheck, CreditCard, Landmark, Truck, ShoppingBag, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Helper static database for Buy Now lookup
@@ -25,7 +25,7 @@ const allProducts = [
 
 function CheckoutContent() {
   const searchParams = useSearchParams();
-  const router = useRouter();
+
   const { items: cartItems, getTotalPrice, clearCart } = useCartStore();
 
   const [mounted, setMounted] = useState(false);

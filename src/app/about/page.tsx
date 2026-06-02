@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Link from "next/link";
 import { ChevronRight, Award, Users, Clock, Globe, Target, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 
 const team = [
   { name: "Managing Director", role: "Leadership", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400" },
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Our Story</h2>
             <h3 className="text-4xl font-black text-foreground mb-6">Built on Precision, Driven by Trust</h3>
             <p className="text-muted-foreground text-lg font-light mb-5 leading-relaxed">
-              Accurate Trade Links (ATL) was founded in 2003 with a simple mission: to provide Kerala's businesses and institutions with reliable, accurate, and affordable weighing and measurement solutions.
+              Accurate Trade Links (ATL) was founded in 2003 with a simple mission: to provide Kerala&apos;s businesses and institutions with reliable, accurate, and affordable weighing and measurement solutions.
             </p>
             <p className="text-muted-foreground font-light mb-8 leading-relaxed">
               Today, ATL serves over 1,00,000 customers across retail, healthcare, manufacturing, logistics, government, and education sectors, providing everything from a simple retail scale to complete factory automation systems.

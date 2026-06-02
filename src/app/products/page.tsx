@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, Filter, SlidersHorizontal, Scale, ChevronRight, Heart, BarChart2, ShoppingCart } from "lucide-react";
+import { Search, Filter, ChevronRight, Heart, BarChart2, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import { useCartStore } from "@/lib/cartStore";

@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Link from "next/link";
-import { ChevronRight, Calendar, User, ArrowRight, Tag } from "lucide-react";
+import { ChevronRight, Calendar, User, ArrowRight } from "lucide-react";
 
 const posts = [
   {

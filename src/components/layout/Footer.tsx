@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, MessageSquare, Mail, MapPin, Share2, ArrowRight } from "lucide-react";
+import { Phone, MessageSquare, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (

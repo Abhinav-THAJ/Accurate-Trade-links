@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronRight, Download, FileText, Star, ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
+import { ChevronRight, Download, Star, ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";

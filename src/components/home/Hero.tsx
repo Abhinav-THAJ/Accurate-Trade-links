@@ -5,8 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowRight, FileText, CheckCircle2, Scale, Receipt,
-  Printer, Package, BarChart, Tag, Droplets, Star, ChevronLeft, ChevronRight
+  ArrowRight, FileText, ChevronLeft, ChevronRight
 } from "lucide-react";
 
 const slides = [

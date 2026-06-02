@@ -7,7 +7,7 @@ import {
   Search, ChevronDown, Menu, X,
   Scale, Receipt, Printer, Package, Hash, Tag, Droplets, ShoppingCart
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import { useCartStore } from "@/lib/cartStore";
 import CartDrawer from "./CartDrawer";
 
